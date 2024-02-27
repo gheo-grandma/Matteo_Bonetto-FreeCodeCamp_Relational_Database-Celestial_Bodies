@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: galaxy; Type: TABLE; Schema: public; Owner: matteobonetto
+-- Name: galaxy; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.galaxy (
@@ -32,10 +32,8 @@ CREATE TABLE public.galaxy (
 );
 
 
-ALTER TABLE public.galaxy OWNER TO matteobonetto;
-
 --
--- Name: galaxy_galaxy_id_seq; Type: SEQUENCE; Schema: public; Owner: matteobonetto
+-- Name: galaxy_galaxy_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.galaxy_galaxy_id_seq
@@ -47,17 +45,15 @@ CREATE SEQUENCE public.galaxy_galaxy_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNER TO matteobonetto;
-
 --
--- Name: galaxy_galaxy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: matteobonetto
+-- Name: galaxy_galaxy_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 
 
 --
--- Name: moon; Type: TABLE; Schema: public; Owner: matteobonetto
+-- Name: moon; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.moon (
@@ -69,10 +65,8 @@ CREATE TABLE public.moon (
 );
 
 
-ALTER TABLE public.moon OWNER TO matteobonetto;
-
 --
--- Name: moon_moon_id_seq; Type: SEQUENCE; Schema: public; Owner: matteobonetto
+-- Name: moon_moon_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.moon_moon_id_seq
@@ -84,17 +78,15 @@ CREATE SEQUENCE public.moon_moon_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.moon_moon_id_seq OWNER TO matteobonetto;
-
 --
--- Name: moon_moon_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: matteobonetto
+-- Name: moon_moon_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.moon_moon_id_seq OWNED BY public.moon.moon_id;
 
 
 --
--- Name: more_info; Type: TABLE; Schema: public; Owner: matteobonetto
+-- Name: more_info; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.more_info (
@@ -104,10 +96,8 @@ CREATE TABLE public.more_info (
 );
 
 
-ALTER TABLE public.more_info OWNER TO matteobonetto;
-
 --
--- Name: more_info_more_info_id_seq; Type: SEQUENCE; Schema: public; Owner: matteobonetto
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.more_info_more_info_id_seq
@@ -119,17 +109,15 @@ CREATE SEQUENCE public.more_info_more_info_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.more_info_more_info_id_seq OWNER TO matteobonetto;
-
 --
--- Name: more_info_more_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: matteobonetto
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.more_info_more_info_id_seq OWNED BY public.more_info.more_info_id;
 
 
 --
--- Name: planet; Type: TABLE; Schema: public; Owner: matteobonetto
+-- Name: planet; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.planet (
@@ -145,10 +133,8 @@ CREATE TABLE public.planet (
 );
 
 
-ALTER TABLE public.planet OWNER TO matteobonetto;
-
 --
--- Name: planet_planet_id_seq; Type: SEQUENCE; Schema: public; Owner: matteobonetto
+-- Name: planet_planet_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.planet_planet_id_seq
@@ -160,17 +146,15 @@ CREATE SEQUENCE public.planet_planet_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.planet_planet_id_seq OWNER TO matteobonetto;
-
 --
--- Name: planet_planet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: matteobonetto
+-- Name: planet_planet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.planet_planet_id_seq OWNED BY public.planet.planet_id;
 
 
 --
--- Name: star; Type: TABLE; Schema: public; Owner: matteobonetto
+-- Name: star; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.star (
@@ -182,10 +166,8 @@ CREATE TABLE public.star (
 );
 
 
-ALTER TABLE public.star OWNER TO matteobonetto;
-
 --
--- Name: star_star_id_seq; Type: SEQUENCE; Schema: public; Owner: matteobonetto
+-- Name: star_star_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.star_star_id_seq
@@ -197,52 +179,50 @@ CREATE SEQUENCE public.star_star_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.star_star_id_seq OWNER TO matteobonetto;
-
 --
--- Name: star_star_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: matteobonetto
+-- Name: star_star_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
 ALTER SEQUENCE public.star_star_id_seq OWNED BY public.star.star_id;
 
 
 --
--- Name: galaxy galaxy_id; Type: DEFAULT; Schema: public; Owner: matteobonetto
+-- Name: galaxy galaxy_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.galaxy ALTER COLUMN galaxy_id SET DEFAULT nextval('public.galaxy_galaxy_id_seq'::regclass);
 
 
 --
--- Name: moon moon_id; Type: DEFAULT; Schema: public; Owner: matteobonetto
+-- Name: moon moon_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.moon ALTER COLUMN moon_id SET DEFAULT nextval('public.moon_moon_id_seq'::regclass);
 
 
 --
--- Name: more_info more_info_id; Type: DEFAULT; Schema: public; Owner: matteobonetto
+-- Name: more_info more_info_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.more_info ALTER COLUMN more_info_id SET DEFAULT nextval('public.more_info_more_info_id_seq'::regclass);
 
 
 --
--- Name: planet planet_id; Type: DEFAULT; Schema: public; Owner: matteobonetto
+-- Name: planet planet_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.planet ALTER COLUMN planet_id SET DEFAULT nextval('public.planet_planet_id_seq'::regclass);
 
 
 --
--- Name: star star_id; Type: DEFAULT; Schema: public; Owner: matteobonetto
+-- Name: star star_id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.star_star_id_seq'::regclass);
 
 
 --
--- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: matteobonetto
+-- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.galaxy (galaxy_id, name, age_in_milions_of_years, galaxy_type) FROM stdin;
@@ -256,7 +236,7 @@ COPY public.galaxy (galaxy_id, name, age_in_milions_of_years, galaxy_type) FROM 
 
 
 --
--- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: matteobonetto
+-- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.moon (moon_id, name, age_in_milions_of_years, distance_from_earth_in_milions_of_km, planet_id) FROM stdin;
@@ -285,7 +265,7 @@ COPY public.moon (moon_id, name, age_in_milions_of_years, distance_from_earth_in
 
 
 --
--- Data for Name: more_info; Type: TABLE DATA; Schema: public; Owner: matteobonetto
+-- Data for Name: more_info; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.more_info (more_info_id, planet_id, description) FROM stdin;
@@ -305,7 +285,7 @@ COPY public.more_info (more_info_id, planet_id, description) FROM stdin;
 
 
 --
--- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: matteobonetto
+-- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.planet (planet_id, name, has_life, is_spherical, age_in_milions_of_years, distance_from_earth, size_in_milions_of_km, star_id, more_info_id) FROM stdin;
@@ -325,7 +305,7 @@ COPY public.planet (planet_id, name, has_life, is_spherical, age_in_milions_of_y
 
 
 --
--- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: matteobonetto
+-- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.star (star_id, name, age_in_milions_of_years, distance_from_earth, galaxy_id) FROM stdin;
@@ -340,42 +320,42 @@ COPY public.star (star_id, name, age_in_milions_of_years, distance_from_earth, g
 
 
 --
--- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: matteobonetto
+-- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --
--- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: matteobonetto
+-- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.moon_moon_id_seq', 21, true);
 
 
 --
--- Name: more_info_more_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: matteobonetto
+-- Name: more_info_more_info_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.more_info_more_info_id_seq', 13, true);
 
 
 --
--- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: matteobonetto
+-- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.planet_planet_id_seq', 12, true);
 
 
 --
--- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: matteobonetto
+-- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.star_star_id_seq', 7, true);
 
 
 --
--- Name: galaxy galaxy_name_key; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: galaxy galaxy_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.galaxy
@@ -383,7 +363,7 @@ ALTER TABLE ONLY public.galaxy
 
 
 --
--- Name: galaxy galaxy_pkey; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: galaxy galaxy_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.galaxy
@@ -391,7 +371,7 @@ ALTER TABLE ONLY public.galaxy
 
 
 --
--- Name: moon moon_name_key; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: moon moon_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.moon
@@ -399,7 +379,7 @@ ALTER TABLE ONLY public.moon
 
 
 --
--- Name: moon moon_pkey; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: moon moon_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.moon
@@ -407,7 +387,7 @@ ALTER TABLE ONLY public.moon
 
 
 --
--- Name: more_info more_info_pkey; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: more_info more_info_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.more_info
@@ -415,7 +395,7 @@ ALTER TABLE ONLY public.more_info
 
 
 --
--- Name: more_info more_info_planet_id_key; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: more_info more_info_planet_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.more_info
@@ -423,7 +403,7 @@ ALTER TABLE ONLY public.more_info
 
 
 --
--- Name: planet planet_name_key; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: planet planet_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.planet
@@ -431,7 +411,7 @@ ALTER TABLE ONLY public.planet
 
 
 --
--- Name: planet planet_pkey; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: planet planet_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.planet
@@ -439,7 +419,7 @@ ALTER TABLE ONLY public.planet
 
 
 --
--- Name: star star_name_key; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: star star_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.star
@@ -447,7 +427,7 @@ ALTER TABLE ONLY public.star
 
 
 --
--- Name: star star_pkey; Type: CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: star star_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.star
@@ -455,7 +435,7 @@ ALTER TABLE ONLY public.star
 
 
 --
--- Name: star galaxy_id; Type: FK CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: star galaxy_id; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.star
@@ -463,7 +443,7 @@ ALTER TABLE ONLY public.star
 
 
 --
--- Name: planet more_info_id; Type: FK CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: planet more_info_id; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.planet
@@ -471,7 +451,7 @@ ALTER TABLE ONLY public.planet
 
 
 --
--- Name: moon planet_id; Type: FK CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: moon planet_id; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.moon
@@ -479,7 +459,7 @@ ALTER TABLE ONLY public.moon
 
 
 --
--- Name: planet star_id; Type: FK CONSTRAINT; Schema: public; Owner: matteobonetto
+-- Name: planet star_id; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.planet
